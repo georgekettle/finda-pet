@@ -1,0 +1,5 @@
+<div>
+    <%= image_tag pet.image, width: 100 %>
+    <p><%= pet.name %> | <%= pet.species %> | <%= link_to 'See more', pet_path(pet) %> | <%= link_to 'Mark as found', edit_pet_path(pet) %></p>
+    <%= render 'lost_or_found', pet: pet %>
+</div>

@@ -1,0 +1,8 @@
+<%= link_to "Back", pets_path %>
+<h1>Post a pet</h1>
+<%= simple_form_for(@pet) do |form| %>
+    <%= form.input :name %>
+    <%= form.input :species, collection: Pet::SPECIES %>
+    <%= form.input :image %>
+    <%= form.submit %>
+<% end %>

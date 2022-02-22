@@ -1,0 +1,9 @@
+<%= link_to "Back", pets_path %>
+<h1>Mark this pet as found</h1>
+<%= image_tag @pet.image, width: 300 %>
+<p><%= @pet.name %> | <%= @pet.species %> | <%= link_to 'See more', pet_path(@pet) %></p>
+
+<%= simple_form_for(@pet) do |form| %>
+    <%= form.input :found_on %>
+    <%= form.submit %>
+<% end %>

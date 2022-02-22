@@ -1,0 +1,7 @@
+<h1>Lost Pets</h1>
+<%= link_to 'Post a lost pet', new_pet_path %>
+<ul>
+    <% @pets.each do |pet| %>
+        <%= render 'pet', pet: pet %>
+    <% end %>
+</ul>
